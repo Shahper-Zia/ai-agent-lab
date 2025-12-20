@@ -128,6 +128,10 @@ def fancy_step_tracker(step: int, total_steps: int) -> None:
     fancy_print(f"STEP {step + 1}/{total_steps}")
 
 
+#---------- Tool helper functions and classes ----------#
+import json
+from typing import Callable
+
 @dataclass
 class TagContentResult:
     """
@@ -166,10 +170,6 @@ def extract_tag_content(text: str, tag: str) -> TagContentResult:
         content=[content.strip() for content in matched_contents],
         found=bool(matched_contents),
     )
-
-#---------- Tool helper functions and classes ----------#
-import json
-from typing import Callable
 
 
 def get_fn_signature(fn: Callable) -> dict:

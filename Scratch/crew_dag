@@ -1,0 +1,7 @@
+digraph {
+	"Poet Agent"
+	"Poem Translator Agent"
+	"Poet Agent" -> "Poem Translator Agent"
+	"Writer Agent"
+	"Poem Translator Agent" -> "Writer Agent"
+}
